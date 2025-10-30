@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AI STEM Assistant</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        @layer base {
+             :root {
+                --primary: #4FD1C5;
+                --secondary: #6B46C1;
+                --accent-pink: #F687B3;
+                --accent-yellow: #F6E05E;
+                --background-light: #f6f7f8;
+                --background-dark: #101c22;
+                --text-light: #1A202C;
+                --text-dark: #EDF2F7
+            }
+        }
+        @keyframes glowing-circuit {
+            0% {
+                box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px var(--primary)
+            }
+            100% {
+                box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary)
+            }
+        }
+        .animated-circuit-line {
+            animation: glowing-circuit 2s infinite alternate
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "var(--primary)",
+                        "secondary": "var(--secondary)",
+                        "accent-pink": "var(--accent-pink)",
+                        "accent-yellow": "var(--accent-yellow)",
+                        "background-light": "var(--background-light)",
+                        "background-dark": "var(--background-dark)",
+                        "text-light": "var(--text-light)",
+                        "text-dark": "var(--text-dark)"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="light font-body">
+    <div
+        class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark font-display group/design-root overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-30 dark:opacity-20">
+            <div class="absolute w-2/3 h-2/3 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            </div>
+        </div>
+        <div
+            class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 via-secondary/10 to-transparent dark:from-primary/5 dark:via-secondary/5">
+        </div>
+        <div class="layout-container flex h-full grow flex-col z-10">
+            <header class="flex items-center justify-between whitespace-nowrap px-6 sm:px-10 py-4">
+                <div class="flex items-center gap-3 text-text-light dark:text-text-dark">
+                    <div class="size-8 text-secondary">
+                        <svg class="text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+                                fill="currentColor"></path>
+                            <path class="text-secondary"
+                                d="M24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7376 42.4987 36.3314 44.1494 32.3462C45.8001 28.361 46.232 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.5783L24 24L24 45.8096Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2
+                        class="text-text-light dark:text-text-dark text-xl font-bold leading-tight tracking-[-0.015em] font-display">
+                        AI STEM Assistant</h2>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <div class="hidden sm:block text-text-light dark:text-text-dark/80 text-sm font-medium font-body">
+                        Empowering the Next Generation of Innovators</div>
+                </div>
+
+            </header>
+            <main class="flex flex-1 justify-center items-center px-4 py-5">
+                <div class="layout-content-container flex flex-col w-full max-w-3xl text-center items-center gap-6">
+                    <div class="flex flex-col gap-4">
+                        <h1
+                            class="text-5xl sm:text-6xl font-bold text-text-light dark:text-text-dark tracking-tighter font-display">
+                            Welcome to <span class="text-primary">AI STEM</span> <span
+                                class="text-secondary">Assistant</span></h1>
+                        <p class="text-lg sm:text-xl text-text-light/80 dark:text-text-dark/80 max-w-3xl font-body">Your
+                            personal guide to STEM opportunities. Let's tailor your experience by understanding your
+                            interests.</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4 w-full mt-6">
+                        <h3 class="text-xl font-semibold text-text-light dark:text-text-dark font-display">Which field
+                            are you interested in?</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2 w-full max-w-2xl">
+                            <button onclick="goToChat('robotics')"
+                                class="flex flex-col h-32 cursor-pointer shrink-0 items-center justify-center gap-y-2 rounded-xl bg-white/70 dark:bg-background-dark/50 p-4 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors shadow-sm border border-gray-200/50 dark:border-gray-700/50 hover:scale-105 transform">
+                                <span class="material-symbols-outlined text-4xl text-primary">smart_toy</span>
+                                <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">
+                                    Robotics</p>
+                            </button>
+                            <button onclick="goToChat('chemistry')"
+                                class="flex flex-col h-32 cursor-pointer shrink-0 items-center justify-center gap-y-2 rounded-xl bg-white/70 dark:bg-background-dark/50 p-4 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors shadow-sm border border-gray-200/50 dark:border-gray-700/50 hover:scale-105 transform">
+                                <span class="material-symbols-outlined text-4xl text-secondary">science</span>
+                                <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">
+                                    Chemistry</p>
+                            </button>
+                            <button onclick="goToChat('coding')"
+                                class="flex flex-col h-32 cursor-pointer shrink-0 items-center justify-center gap-y-2 rounded-xl bg-white/70 dark:bg-background-dark/50 p-4 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors shadow-sm border border-gray-200/50 dark:border-gray-700/50 hover:scale-105 transform">
+                                <span class="material-symbols-outlined text-4xl text-accent-pink">code</span>
+                                <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">
+                                    Coding</p>
+                            </button>
+                            <button onclick="goToChat('engineering')"
+                                class="flex flex-col h-32 cursor-pointer shrink-0 items-center justify-center gap-y-2 rounded-xl bg-white/70 dark:bg-background-dark/50 p-4 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors shadow-sm border border-gray-200/50 dark:border-gray-700/50 hover:scale-105 transform">
+                                <span class="material-symbols-outlined text-4xl text-accent-yellow">engineering</span>
+                                <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">
+                                    Engineering</p>
+                            </button>
+                            <button onclick="goToChat('analytics')"
+                                class="flex flex-col h-32 cursor-pointer shrink-0 items-center justify-center gap-y-2 rounded-xl bg-white/70 dark:bg-background-dark/50 p-4 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors shadow-sm border border-gray-200/50 dark:border-gray-700/50 hover:scale-105 transform">
+                                <span class="material-symbols-outlined text-4xl text-primary">analytics</span>
+                                <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Data
+                                    Science</p>
+                            </button>
+                            <button onclick="goToChat('environmental')"
+                                class="flex flex-col h-32 cursor-pointer shrink-0 items-center justify-center gap-y-2 rounded-xl bg-white/70 dark:bg-background-dark/50 p-4 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors shadow-sm border border-gray-200/50 dark:border-gray-700/50 hover:scale-105 transform">
+                                <span class="material-symbols-outlined text-4xl text-secondary">eco</span>
+                                <p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">
+                                    Environmental</p>
+                            </button>
+                        </div>
+                        <div class="mt-8">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
