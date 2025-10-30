@@ -33,7 +33,7 @@ const getID=()=>{
 }
 
 const goToChat=(field)=>{
-    location = "/group_3/chat_interface.html?field="+field
+    location = "chat_interface.html?field="+field
 }
 
 const getARandomPictureFromImagePaths=()=>{
