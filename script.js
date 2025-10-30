@@ -1,4 +1,4 @@
-const address = "http://127.0.0.1:8000"
+const address = "https://vf-cbc-ai-server.onrender.com"
 const messages = document.getElementById("messages")
 
 const imagePaths = [
