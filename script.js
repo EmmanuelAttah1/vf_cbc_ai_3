@@ -190,12 +190,13 @@ const removeLastMessage=()=>{
 
 
 window.addEventListener("load",()=>{
-    setAIMessage(
-        "Hi! I'm Assist, your personal guide to the world of STEM. I can help you find mentorships, workshops, competitions, and much more. What are you interested in today?",
-        ["Find workshops near me","Show me competitions","Any other organizations?"],
-        true)
 
     if(location.pathname === "/vf_cbc_ai_3/"){
         generateId()
     }
+    
+    setAIMessage(
+        "Hi! I'm Assist, your personal guide to the world of STEM. I can help you find mentorships, workshops, competitions, and much more. What are you interested in today?",
+        ["Find workshops near me","Show me competitions","Any other organizations?"],
+        true)
 })
