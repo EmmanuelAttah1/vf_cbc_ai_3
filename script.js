@@ -195,7 +195,7 @@ window.addEventListener("load",()=>{
         ["Find workshops near me","Show me competitions","Any other organizations?"],
         true)
 
-    if (location.pathname == "/vf_cbc_ai_3/"){
+    if(location.pathname === "/vf_cbc_ai_3/"){
         generateId()
     }
 })
